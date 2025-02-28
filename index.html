@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Online Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let index = 0;
+            const banners = document.querySelectorAll(".banner-item");
+            function showBanner() {
+                banners.forEach((banner, i) => {
+                    banner.style.display = i === index ? "block" : "none";
+                });
+                index = (index + 1) % banners.length;
+            }
+            setInterval(showBanner, 3000);
+            showBanner();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="page-title">EduLearn</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="coursess.html">Courses</a></li>
+                <li><a href="catagorary.html">Categories</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="homepage-banner">
+        <div class="banner-container">
+            <div class="banner-item">
+                <a href="#course1"><img src="C:\Users\SANJAY\Desktop\Vengence\college cc\dfc58ab2-2d46-4279-9814-57e5b16801be.jpg" alt="Web Development"></a>
+                <div class="banner-text">Web Development</div>
+            </div>
+            <div class="banner-item">
+                <a href="#course2"><img src="C:\Users\SANJAY\Desktop\Vengence\college cc\DATA_SCIENCE_AdobeStock-294794307.jpg" alt="Data Science"></a>
+                <div class="banner-text">Data Science</div>
+            </div>
+            <div class="banner-item">
+                <a href="#course3"><img src="C:\Users\SANJAY\Desktop\Vengence\college cc\20191112054904-FotoJet32.jpeg" alt="Digital Marketing"></a>
+                <div class="banner-text">Digital Marketing</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="courses">
+        <h2 style="text-align: center;">Popular Courses</h2>
+        <div class="course-container">
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>Master front-end and back-end development.</p>
+                <a href="web-development.html">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\567828_67d0.webp" alt="Web Development" width="100%">
+                </a>
+            </div>
+            <div class="course-card">
+                <h3>Data Science</h3>
+                <p>Learn Python, AI, and machine learning.</p>
+                <a href="data-science.html">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\903744_8eb2.webp" alt="Data Science" width="100%">
+                </a>
+            </div>
+            <div class="course-card">
+                <h3>Digital Marketing</h3>
+                <p>Boost your brand's online presence.</p>
+                <a href="digital-marketing.html">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\914296_3670.webp" alt="Digital Marketing" width="100%">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 EduLearn. All rights reserved.</p>
+    </footer>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f8ff;
+        }
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: #005bb5;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #0073e6;
+            padding: 10px 0;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #005bb5;
+            border-radius: 5px;
+        }
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner-item {
+            position: absolute;
+            width: 100%;
+            display: none;
+        }
+        .banner-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .banner-item:hover img {
+            transform: scale(1.05);
+        }
+        .banner-text {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .course-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .course-card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            background-color: #717880;
+            color: white;
+            padding: 15px 0;
+        }
+    </style>
+</body>
+</html>

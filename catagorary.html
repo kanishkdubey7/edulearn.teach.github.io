@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Categories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const categoryLinks = document.querySelectorAll(".category-link");
+            const courseCards = document.querySelectorAll(".course-card");
+            const container = document.querySelector(".course-container");
+    
+            const filterCourses = (category) => {
+                let hasVisibleCourses = false;
+    
+                courseCards.forEach(course => {
+                    if (category === "all" || course.dataset.category === category) {
+                        course.style.display = "block"; // Show matching courses
+                        hasVisibleCourses = true;
+                    } else {
+                        course.style.display = "none";  // Hide non-matching courses
+                    }
+                });
+    
+                // Align center initially, shift left after filtering
+                if (category !== "all" && hasVisibleCourses) {
+                    container.classList.add("filtered");
+                } else {
+                    container.classList.remove("filtered");
+                }
+            };
+    
+            // Attach event listeners to category links
+            categoryLinks.forEach((link) => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault(); // Prevent default link behavior
+                    let category = link.dataset.category;
+                    filterCourses(category);
+                });
+            });
+        });
+    </script>    
+        
+</head>
+<body>
+    <header>
+        <div class="page-title">EduLearn</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coursess.html">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="category-section">
+        <aside class="category-sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#" class="category-link" data-category="web">Web Development</a></li>
+                <li><a href="#" class="category-link" data-category="data">Data Science</a></li>
+                <li><a href="#" class="category-link" data-category="marketing">Digital Marketing</a></li>
+                <li><a href="#" class="category-link" data-category="design">Graphic Design</a></li>
+                <li><a href="#" class="category-link" data-category="business">Business Management</a></li>
+                <li><a href="#" class="category-link" data-category="cybersecurity">Cybersecurity</a></li>
+                <li><a href="#" class="category-link" data-category="ai">Artificial Intelligence</a></li>
+                <li><a href="#" class="category-link" data-category="finance">Finance & Investing</a></li>
+                <li><a href="#" class="category-link" data-category="language">Language Learning</a></li>
+                <li><a href="#" class="category-link" data-category="photography">Photography</a></li>
+            </ul>
+        </aside>
+
+        <div class="courses-section">
+            <h2>Explore Courses</h2>
+        
+            <div class="course-container">  
+                <div class="course-card" data-category="marketing">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (6).jpeg" alt="Digital Marketing">
+                    <h3>Full Digital Marketing Course</h3>
+                    <p>Tutor: Clark Kent</p>
+                    <p>Price: Free</p>
+                </div>
+        
+                <div class="course-card" data-category="data">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (7).jpeg" alt="Data Science">
+                    <h3>Data Science Specialization</h3>
+                    <p>Tutor: Alice Johnson</p>
+                    <p>Price: Free</p>
+                </div>
+        
+                <div class="course-card" data-category="web">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (8).jpeg" alt="Web Development">
+                    <h3>Full Stack Web Development</h3>
+                    <p>Tutor: John Doe</p>
+                    <p>Price: Free</p>
+                </div>
+        
+                <div class="course-card" data-category="design">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (4).jpeg" alt="Graphic Design">
+                    <h3>Advanced Graphic Design</h3>
+                    <p>Tutor: Barry Allen</p>
+                    <p>Price: Free</p>
+                </div>
+        
+                <div class="course-card" data-category="cybersecurity">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th.jpeg" alt="Cybersecurity">
+                    <h3>Basics of Cybersecurity</h3>
+                    <p>Tutor: Wally West</p>
+                    <p>Price: Free</p>
+                    </div>
+
+                <div class="course-card" data-category="business">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (11).jpeg" alt="Web Development">
+                    <h3>Fundamentals of Busniness Management</h3>
+                    <p>Tutor: Mark Greyson</p>
+                    <p>Price: Free</p>
+                    </div>
+        
+                <div class="course-card" data-category="ai">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (12).jpeg" alt="Web Development">
+                    <h3>AI and Machine Learning</h3>
+                    <p>Tutor: Mark Greyson</p>
+                    <p>Price: Free</p>
+                    </div>
+                        
+                <div class="course-card" data-category="finance">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (13).jpeg" alt="Web Development">
+                    <h3>Fundamentals of Finace Management</h3>
+                    <p>Tutor: Steve Rogers</p>
+                    <p>Price: Free</p>
+                    </div>
+                
+                <div class="course-card" data-category="language">
+                    <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (14).jpeg" alt="Web Development">
+                    <h3>Learn English</h3>
+                    <p>Tutor: Norman Osborn</p>
+                    <p>Price: Free</p>
+                </div>
+        </div>
+        
+    </section>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: #005bb5;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #0073e6;
+            padding: 10px 0;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #005bb5;
+            border-radius: 5px;
+        }
+        .category-section {
+            display: flex;
+        }
+        .category-sidebar {
+            width: 250px;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .category-sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .category-sidebar a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: #333;
+            transition: background 0.3s;
+        }
+        .category-sidebar a:hover {
+            background: #0073e6;
+            color: white;
+        }
+        .courses-section {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.course-container.filtered {
+    justify-content: flex-start; /* Align left after filtering */
+}
+
+.course-card {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+        .course-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        footer {
+    position: fixed; /* Or 'relative' if you don't want it fixed */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #717880;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+    </style>
+    <footer>
+        <p>&copy; 2025 EduLearn. All rights reserved.</p>
+    </footer>
+</body>
+</html>

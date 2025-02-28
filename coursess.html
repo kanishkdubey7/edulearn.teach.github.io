@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f8ff;
+        }
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: #005bb5;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #0073e6;
+            padding: 10px 0;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #005bb5;
+            border-radius: 5px;
+        }
+        .courses-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .course-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .course-card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+        .course-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            background-color: #0073e6;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function loadPlaylist(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="page-title">EduLearn</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catagorary.html">Categories</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="courses-section">
+        <h2>All Courses</h2>
+        <div class="course-container">
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLyuRouwmQCjkVvCqHEscVOSr6O3KKzEWU')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\1565838_e54e_16.webp" alt="Web Development">
+                <h3>Web Development</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> MJ Watson</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLrAXtmErZgOeY0tOgiUO1Jp2jdfRQoE86')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\950390_270f_3.jpg" alt="Data Science">
+                <h3>Data Science</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Bruce Banner</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLgJ7h9H1ylLGlbN74YbEjgP9B5zVdhh2f')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\914296_3670.webp" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Reed Richards</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLgJ7h9H1ylLGlbN74YbEjgP9B5zVdhh2f')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th.jpeg" alt="Cyber Security">
+                <h3>Cyber Security</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Bruce Wayne</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLyuRouwmQCjkVvCqHEscVOSr6O3KKzEWU')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (1).jpeg" alt="Video Editing and Film Making">
+                <h3>Video Editing and Film Making</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Gwen Stacy</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLrAXtmErZgOeY0tOgiUO1Jp2jdfRQoE86')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (2).jpeg" alt="Cloud Computing">
+                <h3>Cloud Computing</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Peter Parker</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLgJ7h9H1ylLGlbN74YbEjgP9B5zVdhh2f')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (3).jpeg" alt="Introduction To AWS">
+                <h3>Introduction to Amazon Web Services</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Clark Kent</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLgJ7h9H1ylLGlbN74YbEjgP9B5zVdhh2f')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (4).jpeg" alt="Graphic Design">
+                <h3>Basic Graphic Design</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Barry Allen</p>
+            </div>
+            <div class="course-card" onclick="loadPlaylist('https://www.youtube.com/playlist?list=PLgJ7h9H1ylLGlbN74YbEjgP9B5zVdhh2f')">
+                <img src="C:\Users\SANJAY\Desktop\Vengence\college cc\th (5).jpeg" alt="AI and Machine Learning">
+                <h3>Basic AI and Machine Learning</h3>
+                <p><strong>Price:</strong> Free</p>
+                <p><strong>Tutor:</strong> Tony Stark</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 EduLearn. All rights reserved.</p>
+    </footer>
+</body>
+</html>
